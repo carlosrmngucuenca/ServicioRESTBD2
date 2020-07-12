@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Facturacion</title>
+    
+</head>
+
+<body>
+
+
+    <!--Barra principal-->
+    <div class="container">
+        <section class="barra">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #CD5C5C;">
+                <a class="navbar-brand" >FACTURACIÓN Y PAGO EN LÍNEA</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse visible-md visible-lg" id="navbarTogglerDemo02">
+                    <a href="#" onclick="document.getElementById('id01').style.display='block'" style="color: #f5cdaa;">
+                        <span class="glyphicon glyphicon-user">
+                        </span> Registrarte</a>
+                </div>
+            </nav>
+           
+        </section>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+  
+    <div class="container">
+        <h4 class="text-center"><b>REVISAR EL PEDIDO</b>
+          <span class="price" style="color:black">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+        </h4>
+        <h6><b>CLIENTE</b>
+            <span class="price" style="color:black">
+              <i class="fa fa-shopping-cart"></i>
+            </span>
+            <p></p>
+            Nombre: 
+            <!--  <?php echo $_POST["name"]; ?>   -->
+        </h6>
+        
+
+        <h4 class="text-center"><b>PEDIDO</b>
+            <span class="price" style="color:black">
+              <i class="fa fa-shopping-cart"></i>
+            </span>
+        </h4>
+        <!--Tabla de productos-->
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Arroz</th>
+                <td scope="col">ARROZ 100lb</td>
+                <td scope="col">2</td>
+                <td scope="col">100</td>
+              </tr>
+            </tbody>
+            </table> 
+
+        <div id="costo"></div>
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                <p>Subtotal 
+                    <span class="price" style="color:black"><b>$30 <!--  <?php echo $_POST["subtotal"]; ?>   --></b>
+                    </span></p>
+            </div>
+        </div> 
+        
+        
+        
+        <div class="row">
+            <div class="col-4">
+                
+            </div>
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                <form action="http://localhost/FinalBases/RealizarPago.html">
+                    <input type="submit" value="PAGAR AHORA" />
+                </form>
+            </div>
+        </div>    
+        <div>
+            <div class="col-5">
+                <nav aria-label="Page navigation example" >
+                    <ul class="pagination">
+                      <li><a class="page-link"><p class="small">Revisa el pedido</p></a></li>
+                      <li><a class="page-link" href="http://localhost/FinalBases/RealizarPago.html"><p class="small">Envío y Facturación</p></a></li>
+                      <li><a class="page-link" href="http://localhost/FinalBases/ConfirmarPedido.html"><p class="small">Confirmación</p></a></li>
+                    </ul>
+                  </nav>
+            </div>
+            <div class="col-6">
+            </div>
+        </div>    
+        
+        
+          
+    </div>
+
+    
+
+     <!--    Registro -->
+    <!--Registrarse   Cliente-->
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Nombre Completo</b></label>
+                <input type="text" name="uname" required>
+
+                <label for="psw"><b>Usuario</b></label>
+                <input type="text" name="uname" required>
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" name="psw" required>
+                <label for="psw"><b>Correo</b></label>
+                <input type="text" name="uname" required>
+                <label for="psw"><b>Telefono</b></label>
+                <input type="text" name="uname" required>
+                <label for="psw"><b>Direccion</b></label>
+                <input type="text" name="uname" required>
+
+                <button type="submit" class="btn btn-outline-secondary">Registrarse</button>
+                
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!--Fin registros-->
+
+    
+            
+</body>
+
+
+
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Facturacion</title>
+    
+</head>
+
+<body>
+
+
+    <!--Barra principal-->
+    <div class="container">
+        <section class="barra">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #CD5C5C;">
+                <a class="navbar-brand" >FACTURACIÓN Y PAGO EN LÍNEA</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </section>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+  
+    <div class="container">
+        <h4 class="text-center"><b>DIRECCIÓN DE FACTURACIÓN</b>
+          <span class="price" style="color:black">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+        </h4>
+        <h6><b>CLIENTE</b>
+            <span class="price" style="color:black">
+              <i class="fa fa-shopping-cart"></i>
+            </span>
+            <p></p>
+            Dirección: 
+            <!--  <?php echo $_POST["direccion"]; ?>   -->
+        </h6>
+        <div class="row">
+            <div class="col-4">
+                
+            </div>
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                <input type="submit" onclick="document.getElementById('id01').style.display='block'" value="NUEVA DIRECCIÓN">
+            </div>
+        </div> 
+
+        <h4 class="text-center"><b>MÉTODO DE PAGO</b>
+            <span class="price" style="color:black">
+              <i class="fa fa-shopping-cart"></i>
+            </span>
+        </h4>
+
+        <div class="form-check">
+            <div class="col-5">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                Transferencia Bancaria
+                </label>
+          </div>
+            <div class="col-5">
+            <input type="submit" onclick="document.getElementById('id02').style.display='block'" value="INGRESAR CUENTA" class="btn">
+            </div>
+          
+        </div>
+        
+        
+        
+        <div class="row">
+            <div class="col-4">
+                
+            </div>
+            <div class="col-4">
+            </div>
+            
+
+            <div class="col-4">
+                <form action="http://localhost/FinalBases/ConfirmarPedido.html">
+                    <input type="submit" value="PAGAR AHORA" />
+                </form>
+            </div>
+        </div>    
+        <div>
+            <div class="col-5">
+                <nav aria-label="Page navigation example" >
+                    <ul class="pagination">
+                      <li><a class="page-link" href="http://localhost/FinalBases/RevisarPedido.html"><p class="small">Revisa el pedido</p></a></li>
+                      <li class="page-item active"><a class="page-link" href="#"><p class="small">Envío y Facturación</p></a></li>
+                      <li><a class="page-link" href="http://localhost/FinalBases/ConfirmarPedido.html"><p class="small">Confirmación</p></a></li>
+                    </ul>
+                  </nav>
+            </div>
+            <div class="col-6">
+            </div>
+        </div>   
+        
+        
+          
+    </div>
+
+         <!--    Ingreso Dirección y Cuenta -->
+    <!--Ingresar Dirección-->
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+            </div>
+
+            <div class="container">
+                <label for="psw"><b>Direccion</b></label>
+                <input type="text" name="direccion" required>
+
+                <button type="submit" class="btn btn-outline-secondary">Agregar</button>
+                
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+        <!--Ingresar Cuenta-->
+
+        <div id="id02" class="modal">
+
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+    
+                </div>
+    
+                <div class="container">
+                    <label for="psw"><b>Numero de Cuenta</b></label>
+                    <input type="text" name="cuenta" required>
+    
+                    <button type="submit" class="btn btn-outline-secondary">Agregar</button>
+                    
+                </div>
+    
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                        class="cancelbtn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id02');
+    
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    
+        <!--Fin registros-->
+
+            
+</body>
+
+
+
+</html>
